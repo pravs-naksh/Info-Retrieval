@@ -1,0 +1,20 @@
+null  null null null
+163 2.6311605493332753
+null  null null null
+173 2.432151703874911
+null  null null null
+80 2.377813667883806
+null  null null null
+176 2.362904438015245
+null  null null null
+137 2.2185688607332197
+null  null null null
+7 2.122547447861624
+null  null null null
+115 2.113185838179164
+null  null null null
+169 2.109345598634769
+null  null null null
+191 2.073988069455464
+null  null null null
+183 2.070921676694666

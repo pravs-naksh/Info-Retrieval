@@ -1,0 +1,29 @@
+null  null null null
+null  null null null
+198 3.4565010992881904
+null  null null null
+null  null null null
+112 3.0109450712051773
+null  null null null
+null  null null null
+100 2.805835047226984
+null  null null null
+null  null null null
+179 2.699354466381685
+null  null null null
+null  null null null
+163 2.6311605493332753
+null  null null null
+null  null null null
+124 2.5056893464500734
+null  null null null
+null  null null null
+188 2.4563782360549236
+null  null null null
+null  null null null
+173 2.432151703874911
+null  null null null
+null  null null null
+110 2.42825658901182
+null  null null null
+80 2.377813667883806

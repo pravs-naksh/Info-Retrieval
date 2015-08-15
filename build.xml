@@ -1,0 +1,58 @@
+<project name="irsystem" default="compile" basedir=".">
+
+	<property name="build.sysclasspath" value="last" />
+	<property name="build.compiler" value="modern" />
+	<property name="src" value="src" />
+	<property name="BUILD" value="build" />
+	<property name="classes" value="${BUILD}/classes" />
+
+
+	<target name="clean">
+		<delete dir="${BUILD}" />
+		<delete>
+			<fileset defaultexcludes="false" dir="." includes="**/*~"/>
+			<fileset defaultexcludes="false" dir="${src}" includes="**/*~"/>
+		</delete>
+	</target>
+
+	<!-- Prepare target directories -->
+	<target name="prepare" depends="clean">
+		<mkdir dir="${BUILD}" />
+		<mkdir dir="${classes}" />
+	</target>
+
+	<!-- ** means all subdirectories as well -->
+	<!-- * means all files in the current directory -->
+	<!-- for just java files use *.java -->
+
+	<target name="irsystem" depends="prepare">
+		<javac srcdir="${src}" includes="irsystem/**" excludes="**/package.html" destdir="${classes}" classpath="${classes}" debug="on" optimize="on" deprecation="off" />
+	</target>
+
+	<target name="compile" depends="irsystem" />
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${BUILD}/jar" />
+		<jar destfile="${BUILD}/jar/irsystem.jar" basedir="${BUILD}/classes">
+			<manifest>
+				<attribute name="Main-Class" value="irsystem.driver.Driver" />
+			</manifest>
+		</jar>
+
+	</target>
+
+
+	<target name="run" depends="jar">
+		<java jar="${BUILD}/jar/irsystem.jar" fork="true">
+		</java>
+	</target>
+
+	<target name="purgeArchives" depends="clean">
+		<delete file="./Rikhala_Patil.tar" quiet="true" />
+	</target>
+
+	<target name="tarzip" depends="purgeArchives">
+		<tar destfile="./Rikhala_Patil.tar" basedir="." />
+	</target>
+	
+</project>
